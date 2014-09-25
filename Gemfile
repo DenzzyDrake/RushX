@@ -48,6 +48,7 @@ gem 'mail_form'
 gem 'mail'
 gem 'mandrill-rails'
 gem 'formtastic'
+gem 'postmark-rails'
 
 group :development, :test do
      gem 'sqlite3'
