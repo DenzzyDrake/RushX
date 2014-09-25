@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
+  resources :articles
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   root 'home#index'
   get "about" => "home#about"
   get "journey" => "home#journey"
+  match '/contacts',     to: 'contacts#new',             via: 'get'
+  resources "contacts", only: [:new, :create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
