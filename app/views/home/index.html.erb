@@ -1,0 +1,57 @@
+<body>
+
+         <div class="site-wrapper">
+
+           <div class="site-wrapper-inner">
+
+             <div class="cover-container">
+
+               <div class="masthead clearfix">
+                 <div class="inner">
+                   <h3 class="masthead-brand">Rush Alert</h3>
+                   <ul class="nav masthead-nav">
+                     <li class="active"><%= link_to "Home", root_path %></li>
+                     <li><%= link_to "About", about_path %></li>
+                     <li><%= link_to "Journey", journey_path %></li>
+                   </ul>
+                 </div>
+               </div>
+
+                <div class="inner cover">
+                  <h1 class="cover-heading"><%= image_tag "RushAlert-Logo-02.png"%></h1>
+                  <p class="lead"> Only 10% of High School Athletes Get To Participate in College Sports. Only 5% of College Athletes Play On The Professional Level...What about the other 90% in High School, and College? Our One Objective To Land Athletes Careers after their Athletic Contributions. Contact Us Today!!!!!!</p>
+                  <p class="lead">
+                    <%= link_to "Blog", journey_path, class: "btn btn-warning btn-lg" %>
+                  </p>
+                </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+        <script>
+    $.backstretch([
+         "<%= asset_path 'baseball.jpg' %>"
+          , "<%= asset_path 'basketball.jpg' %>"
+          , "<%= asset_path 'football.jpg' %>"
+          , "<%= asset_path 'golf.jpg' %>"
+          , "<%= asset_path 'soccer.jpg' %>"
+          , "<%= asset_path 'track.jpg' %>"
+          , "<%= asset_path 'volley.jpg' %>"
+          , "<%= asset_path 'boxing.jpg' %>"
+          , "<%= asset_path 'mountain1.jpg' %>"
+          , "<%= asset_path 'diploma3.jpg' %>"
+          , "<%= asset_path 'business.jpg' %>"
+          , "<%= asset_path 'businesss.jpg' %>"
+          , "<%= asset_path 'resume.jpg' %>"
+          , "<%= asset_path 'resume2.jpg' %>"
+          , "<%= asset_path 'mentoring1.jpg' %>"
+          , "<%= asset_path 'sports.jpg' %>"
+
+
+       
+        ], {duration: 3000, fade: 750});
+    </script>
+  </body>
