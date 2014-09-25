@@ -46,6 +46,7 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'simple_form'
 gem 'mail_form'
 gem 'mail'
+gem 'mandrill-rails'
 gem 'formtastic'
 
 group :development, :test do
