@@ -11,6 +11,7 @@ module RushX
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+   config.app_generators.scaffold_controller = :scaffold_controller
    config.action_mailer.delivery_method = :postmark
    config.action_mailer.postmark_settings = { :api_key => "c4bed97e-76f4-4a4b-b0af-bc812f6cfcc4" }
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.

@@ -3,13 +3,13 @@
 one:
   title: MyString
   author: MyString
-  published_at: 2014-09-24
+  published_at: MyString
   content: MyText
   picture: MyString
 
 two:
   title: MyString
   author: MyString
-  published_at: 2014-09-24
+  published_at: MyString
   content: MyText
   picture: MyString
