@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   resources :articles
 
-  resources :pins
+  resources :pins do
+    resources :answers
+  end
 
   devise_for :users
   devise_for :admin_users, ActiveAdmin::Devise.config
