@@ -6,5 +6,23 @@
   <%= @pin.description %>
 </p>
 
+<h2>Answers</h2>
+<% @pin.answers.each do |comment| %>
+  <p>
+    <strong>Answer:</strong>
+    <%= answer.description %>
+  </p>
+<% end %>
+ 
+<h2>Answer this questions:</h2>
+<%= form_for([@pin, @pin.answers.build]) do |f| %>
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
 <%= link_to 'Edit', edit_pin_path(@pin) %> |
 <%= link_to 'Back', pins_path %>
