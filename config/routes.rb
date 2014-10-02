@@ -1,13 +1,9 @@
 Rails.application.routes.draw do
-  resources :articles
-
   resources :pins do
     resources :answers
   end
 
-  devise_for :users
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
+  devise_for :users, ActiveAdmin::Devise.config
   root 'home#index'
   get "about" => "home#about"
   get "journey" => "home#journey"
