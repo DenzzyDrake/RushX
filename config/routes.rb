@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     resources :answers
   end
 
-  devise_for :users, ActiveAdmin::Devise.config
+  devise_for :users
   root 'home#index'
   get "about" => "home#about"
   get "journey" => "home#journey"
