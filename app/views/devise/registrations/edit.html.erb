@@ -17,6 +17,19 @@
       </div>
 
       <div class="form-group">
+       <%= f.label :bio %>
+       <%= f.text_area :bio, size: "60x12", class: 'form-control' %>
+     </div>
+     <div class="form-group">
+       <%= f.label :web %>
+       <%= f.text_field :web, class: 'form-control' %>
+     </div>
+     <div class="form-group">
+       <%= f.label :speciality %>
+       <%= f.text_field :speciality, class: 'form-control' %>
+     </div>
+
+      <div class="form-group">
         <%= f.label :email %>
         <%= f.email_field :email, class: "form-control", :autofocus => true %>
       </div>

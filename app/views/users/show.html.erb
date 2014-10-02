@@ -1,0 +1,27 @@
+<body style="background-color:black;">
+ <%= render 'layouts/header' %>
+<h3>Free Agent</h3>
+<p><img class="img-circle"<%= image_tag(current_user.image.url(:medium )) %><p>
+<p>Name: <%= @user.name if @user.name %></p>
+<p>Email: <%= @user.email if @user.email %></p>
+<p>Speciality: <%= @user.speciality if @user.speciality %></p>
+<p>WebPage: <%= @user.name if @user.name %></p>
+<p>Bio: <%= @user.bio if @user.bio %></p>
+<p><% @resumes.each do |resume| %>
+      <tr>
+        <td><%= resume.name %></td>
+        <td><%= link_to "Download Resume", resume.attachment_url %></td>
+        <td><%= button_to "Delete",  resume, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{resume.name}?" %></td>
+      </tr>
+    <% end %></p>
+<p><% @covers.each do |cover| %>
+      <tr>
+        <td><%= cover.name %></td>
+        <td><%= link_to "Download Resume", cover.attachment_url %></td>
+        <td><%= button_to "Delete",  cover, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{cover.name}?" %></td>
+      </tr>
+    <% end %></p>
+<%= link_to "New Cover", new_cover_path, class: "btn btn-primary" %>
+<%= link_to "New Resume", new_resume_path, class: "btn btn-primary" %>
+</body>
+

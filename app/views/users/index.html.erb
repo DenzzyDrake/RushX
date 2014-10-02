@@ -1,0 +1,19 @@
+<body style="background-color:black;">
+<%= render 'layouts/header' %>
+<div class="container">
+  <div class="row">
+    <h3>Free Agents</h3>
+    <div class="column">
+      <table class="table">
+        <tbody>
+          <% @users.each do |user| %>
+            <tr>
+              <%= render user %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</body>

@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :users
+  resources :resumes, only: [:index, :new, :create, :destroy]
+  resources :covers, only: [:index, :new, :create, :destroy]
   resources :pins do
     resources :answers
   end
-
-  devise_for :users
   root 'home#index'
   get "about" => "home#about"
   get "journey" => "home#journey"

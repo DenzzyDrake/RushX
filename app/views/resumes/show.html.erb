@@ -1,0 +1,15 @@
+<%= render 'layouts/header' %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @resume.name %>
+</p>
+
+<p>
+  <strong>Attachment:</strong>
+  <%= @resume.attachment %>
+</p>
+
+<%= link_to 'Edit', edit_resume_path(@resume) %> |
+<%= link_to 'Back', resumes_path %>

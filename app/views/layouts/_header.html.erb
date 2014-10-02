@@ -25,7 +25,14 @@
             <% end %>
           </li>
           <li><%= link_to "Account Settings", edit_user_registration_path %></li>
+          <li><%= link_to "New Resume", new_resume_path %><li>
+          <li><%= link_to "New Cover Letter", new_cover_path %><li>
           <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+          <li><%= form_tag(users_path, :method => "get", id: "search-form") do %></li>
+          <li><%= text_field_tag :search, params[:search], placeholder: "Search Users" %></li>
+          <li><%= link_to 'Users', users_path %></li>
+          <li><%= submit_tag "Search", :name => nil %></li>
+          <% end %>
         <% else %>
           <li><%= link_to "Sign in", new_user_session_path %></li>
         <% end %>
